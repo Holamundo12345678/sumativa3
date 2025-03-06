@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Encuesta - Restaurante Cihuatan</title>
+    <style>
+        body {
+            font-family: sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f4f4f4;
+        }
+
+        .form-container {
+            background-image: url('https://tokapp.com/wp-content/uploads/2019/11/imagen_encuestas_wordpress-01-1024x819.png');
+            background-color: white;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            width: 400px;
+        }
+
+        .form-container h2 {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+
+        .form-container label {
+            display: block;
+            margin-bottom: 5px;
+        }
+
+        .form-container input[type="text"],
+        .form-container input[type="email"],
+        .form-container textarea,
+        .form-container select {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin-bottom: 15px;
+            border: 1px solid #ddd;
+            border-radius: 4px;
+            box-sizing: border-box;
+        }
+
+        .form-container button {
+            background-color: #1a73e8;
+            color: white;
+            padding: 10px 15px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            width: 100%;
+        }
+
+        .form-container button:hover {
+            background-color: #185abc;
+        }
+    </style>
+</head>
+<body>
+    <div class="form-container">
+        <h2>Encuesta de Satisfacción</h2>
+        <form id="surveyForm">
+
+            <label for="experiencia">¿Cómo calificarías tu experiencia en general?</label>
+            <select id="experiencia" required>
+                <option value="">Selecciona una opción</option>
+                <option value="excelente">Excelente</option>
+                <option value="buena">Buena</option>
+                <option value="regular">Regular</option>
+                <option value="mala">Mala</option>
+            </select>
+
+            <label for="comida">¿Qué te pareció la calidad de la comida?</label>
+            <select id="comida" required>
+                <option value="">Selecciona una opción</option>
+                <option value="excelente">Excelente</option>
+                <option value="buena">Buena</option>
+                <option value="regular">Regular</option>
+                <option value="mala">Mala</option>
+            </select>
+
+            <label for="servicio">¿Cómo calificarías el servicio?</label>
+            <select id="servicio" required>
+                <option value="">Selecciona una opción</option>
+                <option value="excelente">Excelente</option>
+                <option value="buena">Buena</option>
+                <option value="regular">Regular</option>
+                <option value="mala">Mala</option>
+            </select>
+
+
+            <label for="tiempoEspera">¿Cómo calificarías el tiempo de espera?</label>
+            <select id="tiempoEspera" required>
+                <option value="">Selecciona una opción</option>
+                <option value="excelente">Excelente</option>
+                <option value="buena">Buena</option>
+                <option value="regular">Regular</option>
+                <option value="mala">Mala</option>
+            </select>
+
+            <label for="precio">¿Consideras que los precios son justos?</label>
+            <select id="precio" required>
+                <option value="">Selecciona una opción</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="recomendacion">¿Recomendarías nuestro restaurante?</label>
+            <select id="recomendacion" required>
+                <option value="">Selecciona una opción</option>
+                <option value="si">Sí</option>
+                <option value="no">No</option>
+            </select>
+
+            <label for="comentarios">Comentarios adicionales:</label>
+            <textarea id="comentarios" rows="4"></textarea>
+
+            <button type="submit">Enviar Encuesta</button>
+        </form>
+    </div>
+
+    <script>
+      document.getElementById('surveyForm').addEventListener('submit', function(event) {
+            event.preventDefault();
+            alert("¡Gracias por tu opinión!");
+            window.location.href = "index.html#menu"; // Redirige a index.html y desplaza a la sección con id="menu"
+        });
+    </script>
+</body>
+</html>

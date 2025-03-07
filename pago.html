@@ -110,6 +110,7 @@
 
     <script>
         document.getElementById('paymentForm').addEventListener('submit', function(event) {
+            event.preventDefault(); // Evita el envío predeterminado del formulario
             let isValid = true;
 
             // Validación del número de tarjeta
@@ -142,8 +143,9 @@
                 document.getElementById('cvcError').style.display = 'none';
             }
 
-            if (!isValid) {
-                event.preventDefault(); // Evita el envío del formulario si hay errores
+            if (isValid) {
+                alert('¡Su pago se realizó con éxito!');
+                document.getElementById('paymentForm').reset(); // Limpia el formulario
             }
         });
     </script>
